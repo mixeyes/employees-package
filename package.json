@@ -1,0 +1,34 @@
+{
+  "name": "employees-package",
+  "version": "1.0.0",
+  "description": "next-app + express",
+  "main": "index.js",
+  "workspaces": [
+    "back",
+    "front"
+  ],
+  "scripts": {
+    "start": "npm run start -w back && npm run start -w front",
+    "start:dev": "concurrently --names 'BACK,FRONT' -c 'green,blue' 'npm:start:dev -w back' 'npm:start:dev -w front'",
+    "start:back": "npm run start:dev -w back",
+    "start:front": "npm run start:dev -w front",
+    "build": "npm run build -w back && npm run build -w front",
+    "build:back": "npm run build -w back",
+    "build:front": "npm run build -w front",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier ./**/*.{html,ts,tsx,json,xml,md,scss}",
+    "format:quiet": "npm run format -- --list-different",
+    "format:fix": "npm run format -- --write"
+  },
+  "author": "ML",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.16.1",
+    "@typescript-eslint/parser": "^7.16.1",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.5",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.3"
+  }
+}

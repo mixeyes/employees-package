@@ -1,16 +1,14 @@
-import dotenv from 'dotenv';
-import find from 'find';
+import * as dotenv from 'dotenv';
+import * as find from 'find';
 import Jasmine from 'jasmine';
 import { parse } from 'ts-command-line-args';
 import logger from 'jet-logger';
-
 
 // **** Types **** //
 
 interface IArgs {
   testFile: string;
 }
-
 
 // **** Setup **** //
 
@@ -24,14 +22,13 @@ if (result2.error) {
   throw result2.error;
 }
 
-// Setup command line options. 
+// Setup command line options.
 const args = parse<IArgs>({
   testFile: {
-    type: String,
     defaultValue: '',
+    type: String,
   },
 });
-
 
 // ** Start Jasmine ** //
 
@@ -43,9 +40,7 @@ jasmine.exitOnCompletion = false;
 jasmine.loadConfig({
   random: true,
   spec_dir: 'spec',
-  spec_files: [
-    './tests/**/*.spec.ts',
-  ],
+  spec_files: ['./tests/**/*.spec.ts'],
   stopSpecOnExpectationFailure: false,
 });
 

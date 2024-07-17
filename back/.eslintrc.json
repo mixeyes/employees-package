@@ -1,8 +1,6 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint"
-  ],
+  "plugins": ["@typescript-eslint"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -10,7 +8,7 @@
     "plugin:node/recommended"
   ],
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "project": "./back/tsconfig.json"
   },
   "rules": {
     "@typescript-eslint/explicit-member-accessibility": "warn",
@@ -29,10 +27,7 @@
     "indent": ["warn", 2],
     "quotes": ["warn", "single"],
     "node/no-process-env": 1,
-    "node/no-unsupported-features/es-syntax": [
-      "error",
-      { "ignores" : ["modules"] }
-    ],
+    "node/no-unsupported-features/es-syntax": ["error", { "ignores": ["modules"] }],
     "node/no-missing-import": 0,
     "node/no-unpublished-import": 0
   },

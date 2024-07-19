@@ -37,7 +37,7 @@ if (cluster.isPrimary) {
       json(),
     ),
     transports: [new winston.transports.Console()],
-    // transports: [new winston.transports.File({ dirname: '../logs', filename: 'log.json', maxsize: 100000, maxFiles: 5 })],
+    // transports: [new winston.transports.File({ dirname: '../../logs', filename: 'log.json', maxsize: 100000, maxFiles: 5 })],
   });
 
   const morganMiddleware = morgan(

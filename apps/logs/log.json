@@ -1,0 +1,99 @@
+{
+    "level": "http",
+    "message": "incoming-request",
+    "method": "GET",
+    "response_time": 5.411,
+    "status": 304,
+    "timestamp": "2024-07-19 03:12:27.022 PM",
+    "url": "/"
+}
+{
+    "level": "http",
+    "message": "incoming-request",
+    "method": "GET",
+    "response_time": 1.155,
+    "status": 304,
+    "timestamp": "2024-07-19 03:12:27.554 PM",
+    "url": "/"
+}
+{
+    "level": "http",
+    "message": "incoming-request",
+    "method": "GET",
+    "response_time": 0.783,
+    "status": 304,
+    "timestamp": "2024-07-19 03:12:28.216 PM",
+    "url": "/"
+}
+{
+    "level": "http",
+    "message": "incoming-request",
+    "method": "GET",
+    "response_time": 0.604,
+    "status": 304,
+    "timestamp": "2024-07-19 03:12:28.835 PM",
+    "url": "/"
+}
+{
+    "level": "http",
+    "message": "incoming-request",
+    "method": "GET",
+    "response_time": 7.749,
+    "status": 304,
+    "timestamp": "2024-07-19 03:12:54.245 PM",
+    "url": "/"
+}
+{
+    "level": "http",
+    "message": "incoming-request",
+    "method": "GET",
+    "response_time": 1.065,
+    "status": 304,
+    "timestamp": "2024-07-19 03:12:54.588 PM",
+    "url": "/"
+}
+{
+    "level": "http",
+    "message": "incoming-request",
+    "method": "GET",
+    "response_time": 0.743,
+    "status": 304,
+    "timestamp": "2024-07-19 03:12:54.974 PM",
+    "url": "/"
+}
+{
+    "level": "http",
+    "message": "incoming-request",
+    "method": "GET",
+    "response_time": 0.789,
+    "status": 304,
+    "timestamp": "2024-07-19 03:12:55.346 PM",
+    "url": "/"
+}
+{
+    "level": "http",
+    "message": "incoming-request",
+    "method": "GET",
+    "response_time": 0.988,
+    "status": 304,
+    "timestamp": "2024-07-19 03:12:55.804 PM",
+    "url": "/"
+}
+{
+    "level": "http",
+    "message": "incoming-request",
+    "method": "GET",
+    "response_time": 1.068,
+    "status": 304,
+    "timestamp": "2024-07-19 03:12:56.418 PM",
+    "url": "/"
+}
+{
+    "level": "http",
+    "message": "incoming-request",
+    "method": "GET",
+    "response_time": 0.905,
+    "status": 304,
+    "timestamp": "2024-07-19 03:12:56.779 PM",
+    "url": "/"
+}

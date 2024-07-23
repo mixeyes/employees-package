@@ -1,4 +1,5 @@
 import express, { Application, Request, Response } from 'express';
+import session from 'express-session';
 import dotenv from 'dotenv';
 import compression from 'compression';
 import cors from 'cors';
@@ -6,7 +7,10 @@ import winston from 'winston';
 import morgan from 'morgan';
 import os from 'os';
 import cluster from 'cluster';
+import helmet from 'helmet';
+import grant from 'grant';
 import { rateLimit } from 'express-rate-limit';
+import grantConfig from './grant-config';
 
 dotenv.config();
 const app: Application = express();
@@ -68,12 +72,15 @@ if (cluster.isPrimary) {
     standardHeaders: 'draft-7', // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
     legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
     // store: ... , // Redis, Memcached, etc. See below.
-  })
+  });
 
   app.use(morganMiddleware);
   app.use(compression());
   app.use(cors());
   app.use(limiter);
+  app.use(helmet());
+  app.use(grant.express(grantConfig));
+  app.use(session({ secret: 'grant', resave: true, saveUninitialized: true }));
 
   app.get('/', (req: Request, res: Response) => {
     res.send('Hello, World!');
